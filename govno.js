@@ -10,7 +10,7 @@ class Reservation extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
     handleSubmit() {
-        alert('на нахуй');
+        alert('на нахуй'+this.state.numberOfGuests+this.state.isGoing);
     }
 
     handleInputChange(event) {
@@ -43,7 +43,7 @@ class Reservation extends React.Component {
         value={this.state.numberOfGuests}
         onChange={this.handleInputChange} />
         </label>
-        <input type="submit"/>
+        <input onClick={this.handleSubmit} type="submit"/>
             </form>
     );
     }
